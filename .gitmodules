@@ -1,0 +1,4 @@
+[submodule "frontend"]
+	url = https://github.com/TimurZav/react_admin.git
+[submodule "test-admin"]
+	url = https://github.com/TimurZav/test_react_admin.git

@@ -1,0 +1,6 @@
+Django==4.1
+django_filter==21.1
+django_json_widget==1.1.1
+django_prettyjson==0.4.1
+djangorestframework==3.13.1
+prettyjson==1.0.3

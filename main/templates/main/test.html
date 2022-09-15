@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Load images</title>
+    <link rel="stylesheet" href="{% static '/main/css/bootstrap.min.css' %}">
+</head>
+<body>
+<!--    <img src="{% static 'main/img/7387_OOCL_ИЮЛЬ-007_port.jpg' %}" alt="My image">-->
+
+<div class="content">
+    {% if categories %}
+    <div class="card-group">
+    {% for category in categories %}
+          <div class="row g-0">
+
+              <div class="col-md-10">
+<!--                  <img src="{% static 'main/img/7387_OOCL_ИЮЛЬ-007_port.jpg' %}" style="width: 70%" alt="My image">-->
+                  <img src="{{ category.image.url }}" class="img-fluid rounded-start" alt="">
+              </div>
+
+              <div class="col-md-2">
+                  <div class="card-body">
+                      <p class="card-text">
+                           {{ category.data }}
+                      </p>
+                  </div>
+              </div>
+
+              <form action="/your-name/" method="post">
+                <label for="your_name">Your name: </label>
+                <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+                <input type="submit" value="OK">
+              </form>
+
+          </div>
+    {% endfor %}
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
